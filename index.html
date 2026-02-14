@@ -8,12 +8,12 @@
       text-align: center;
       font-family: 'Comic Sans MS', cursive, sans-serif;
       margin-top: 100px;
-      background: linear-gradient(135deg, #ffe6e6, #ffb3c6);
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       overflow: hidden;
     }
     h1 {
       color: #d6336c;
-      font-size: 36px;
+      font-size: 40px;
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
@@ -27,6 +27,11 @@
       color: #d6336c;
       margin-top: 20px;
       font-weight: bold;
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     button {
       padding: 12px 24px;
@@ -55,7 +60,7 @@
       position: absolute;
       color: #ff4d6d;
       font-size: 24px;
-      animation: floatUp 4s linear forwards;
+      animation: floatUp 5s linear forwards;
     }
     @keyframes floatUp {
       0% { transform: translateY(0); opacity: 1; }
@@ -64,10 +69,16 @@
   </style>
 </head>
 <body>
-  <h1>Will you be my Valentine? ❤️</h1>
-  <button id="yesBtn">Yes 💖</button>
+  <h1>💖 Happy Valentine's Day Ranu 💖</h1>
+  <button id="yesBtn">Yes 💕</button>
   <button id="noBtn">No 🙈</button>
-  <div id="message">Gussa bohot karti ho 😅 lekin I love you bohot saara ❤️💞💘</div>
+  <div id="message">
+    Gussa bohot karti ho 😅<br>
+    Lekin I love you bohot saara ❤️💞💘<br>
+    Tum meri duniya ho 🌎✨<br>
+    Tum meri khushi ho 🌸💫<br>
+    Aur tum meri Valentine ho forever 💍💖
+  </div>
 
   <script>
     const yesBtn = document.getElementById("yesBtn");
@@ -88,7 +99,7 @@
     });
 
     function createHearts() {
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 20; i++) {
         const heart = document.createElement("div");
         heart.className = "heart";
         heart.innerHTML = "❤️";
@@ -98,7 +109,7 @@
 
         setTimeout(() => {
           heart.remove();
-        }, 4000);
+        }, 5000);
       }
     }
   </script>
